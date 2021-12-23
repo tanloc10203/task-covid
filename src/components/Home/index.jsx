@@ -32,7 +32,7 @@ function Home() {
       <Cards />
       <LineChart />
       <Statistics />
-      <Footer />
+      <Footer ></Footer>
     </main>
   )
 }
