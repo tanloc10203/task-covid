@@ -1,0 +1,100 @@
+.customSelect {
+  padding: 12px;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  outline: none;
+  margin-left: 5px;
+  border-radius: 5px;
+  background: var(--bg-button);
+  color: var(--color-text);
+}
+
+.main {
+  font-size: 18px;
+  .mainSelected {
+    display: flex;
+    align-items: center;
+    .optionsValue {
+      position: relative;
+      padding: 10px;
+      border-radius: 5px;
+      width: 300px;
+      margin-left: 8px;
+      background: var(--bg-button);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: all 0.25s ease-in-out 0s;
+      justify-content: space-between;
+
+      .optionInfor {
+        display: flex;
+        align-items: center;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+
+      img {
+        margin-right: 8px;
+        max-width: 100%;
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+      }
+
+      .option {
+        margin-right: 16px;
+        margin-top: 2px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        background: var(--bg-button);
+        overflow: auto;
+        border-radius: 5px;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease-in-out;
+
+        .listOption {
+          padding: 2px 10px;
+          display: flex;
+          align-items: center;
+          transition: all 0.25s ease-in-out;
+          
+          &:hover {
+            background: rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+.open {
+  animation: open 0.25s linear forwards;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0.3;
+    visibility: visible;
+    height: 100px;
+  }
+  50% {
+    opacity: 0.7;
+    visibility: visible;
+    height: 200px;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    height: 400px;
+  }
+}

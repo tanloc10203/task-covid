@@ -1,0 +1,30 @@
+.card {
+  display: block;
+  margin: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  border-radius: 5px;
+  border-left: 4px solid #000;
+  background: var(--bg-button);
+  flex: 30%;
+  div {
+    span {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+    }
+  }
+}
+
+.success {
+  border-color: rgb(69, 236, 69);
+}
+
+.warning {
+  border-color: rgb(233, 233, 37);
+}
+
+.danger {
+  border-color: rgb(194, 39, 39);
+}

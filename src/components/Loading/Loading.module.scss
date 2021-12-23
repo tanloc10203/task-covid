@@ -1,0 +1,16 @@
+.dots {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-main);
+  border-right: 2px solid transparent;
+  animation: dots .3s linear infinite;
+  display: inline-block;
+  background: var(--text-main);
+}
+
+@keyframes dots {
+  from {
+    transform: rotate(360deg);
+  }
+}

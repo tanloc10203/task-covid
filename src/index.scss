@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+:root {
+  --bg-main: #202124;
+  --bg-button: #3c495d;
+  --color-main: #dcdcdd;
+  --color-text: #a5afb7;
+  --color-white: #fbfbfb;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: rgb(135, 135, 135);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-button);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--bg-main);
+  color: var(--color-main);
+}
+
+p {
+  margin: 0;
+}
+
+.tooltip {
+  position: absolute;
+  margin: 8px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  max-width: 300px;
+  font-size: 14px;
+  z-index: 9;
+  pointer-events: none;
+  p {
+    border-bottom: 1px solid;
+    padding: 8px 0;
+  }
+  span{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.mapboxgl-popup {
+  padding: 0;
+  margin: 0;
+  color: #424242;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  margin: 0 32px;
+}
+
+.footer{
+  text-align: center;
+  padding: 16px 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+  p {
+    a {
+      color: #fff;
+      font-weight: bold;
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
