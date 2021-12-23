@@ -3,6 +3,10 @@ import React from 'react';
 import MapGL, { FlyToInterpolator, Layer, Source } from "react-map-gl";
 import { useSelect } from '../../HOC';
 import lookup from 'country-code-lookup';
+import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 function Map() {
   const mapRef = React.useRef(null);
